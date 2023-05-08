@@ -88,6 +88,8 @@ namespace App {
     void App_WifiTV_onCreate()
     {
         UI_LOG("[%s] onCreate\n", App_WifiTV_appName().c_str());
+        
+        device->lvgl.disable();
 
         _wifi_tv_init();
         while (1) {
@@ -95,6 +97,9 @@ namespace App {
             if (device->Button.B.pressed()) 
                     break;
         }
+
+        device->lvgl.enable();
+        
         lv_obj_t * label = lv_label_create(lv_scr_act());
         lv_obj_align(label, LV_ALIGN_CENTER, 0, 0);
         lv_label_set_text(label, "Press B again to quit");

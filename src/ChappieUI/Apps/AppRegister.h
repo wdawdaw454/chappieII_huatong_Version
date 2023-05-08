@@ -55,13 +55,13 @@ namespace App {
          * 
          */
         App_Login(Watch),
-        App_Login(Settings),
-		App_Login(StupidSnake),
-		App_Login(Dino),
+        //App_Login(Settings),
+		//App_Login(StupidSnake),
+		//App_Login(Dino),
 		App_Login(FFT),
 		App_Login(ESPNOW),
 		App_Login(WifiTV),
-		App_Login(Gamepad),
+		//App_Login(Gamepad),
 		/* Login locator */
         /* Don't remove this, or python script's auto login will be failed */
 
