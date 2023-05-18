@@ -2,7 +2,6 @@
 #include "App_Settings.h"
 #include "../../../ChappieBsp/Chappie.h"
 
-
 static std::string app_name = "Settings";
 static CHAPPIE* device;
 
@@ -42,13 +41,22 @@ namespace App {
     {
         UI_LOG("[%s] onCreate\n", App_Settings_appName().c_str());
 
-        /*Create an Arc*/
-        lv_obj_t * arc = lv_arc_create(lv_scr_act());
-        lv_obj_set_size(arc, 150, 150);
-        lv_arc_set_rotation(arc, 135);
-        lv_arc_set_bg_angles(arc, 0, 270);
-        lv_arc_set_value(arc, 40);
-        lv_obj_center(arc);
+       //static uint8_t frame_id=0;
+       //lv_obj_t * img1;
+       //int len = sprintf(buf, "S:/hold/%04d.bin", frame_id++);
+       //buf[len] = 0;
+       //lv_img_set_src(img1,buf);
+       //if (frame_id == 311) frame_id = 0;
+
+       
+	// lv_obj_t* obj = lv_img_create(lv_scr_act());
+    // lv_img_set_src(obj,"S:1.bmp");    
+    // lv_obj_center(obj);
+
+    lv_obj_t* gif1 = lv_gif_create(lv_scr_act());
+    lv_gif_set_src(gif1,"S:1.gif");
+    lv_obj_center(gif1);
+
     }
 
 
